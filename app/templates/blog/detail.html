@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Detail{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+    <li>Id: {{ post.id }}</li>
+    <li>Title: {{ post.title }}</li>
+    <li>Description: {{ post.body }}</li>
+    </ul>
+    <h1>Add comment</h1>
+            <form method="post">
+            <label for="body_id">Comment</label>
+            <input type="text" name="body" id="body_id">
+            <input type="submit" value="post">
+        </form>
+    <ul>
+    {% for comment in post.comments %}
+        <li>{{ comment.body }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
