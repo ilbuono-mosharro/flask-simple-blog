@@ -1,2 +1,2 @@
 # flask-simple-blog
- Flask Blog
+ in development, learning flask
